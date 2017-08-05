@@ -1,0 +1,28 @@
+body
+{
+	background: red;
+}
+
+$color-chem: blue;
+.box
+{
+	width: 100px;
+	height: 100px;
+	background: $color-chem;
+}
+@import 'box';
+
+@mixin marg10($mt,$mb,$mr,$ml)
+{
+	margin-top: $mt;
+	margin-bottom: $mb;
+	margin-right: $mr;
+	margin-left: $ml;
+}
+.box
+{
+	width: calc(100% / 2);
+	height: 100px;
+	background: blue;
+	@include marg10(20px,40px,15px,60px);
+}
